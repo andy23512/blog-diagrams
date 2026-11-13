@@ -1,0 +1,17 @@
+---
+displayMode: compact
+---
+gantt
+    dateFormat X
+    axisFormat %s
+    title Two-way layer lock ( A1: ② | A2: ① )
+    section ㅤ
+    Press: milestone, done, 1, 1
+    Release: milestone, done, 2, 2
+    Press: milestone, done, 3, 3
+    Release: milestone, done, 4, 4
+    tickInterval 1day
+    section ㅤㅤ
+    A1: 0, 1s
+    A2: active, 1, 2s
+    A1: 3, 2s

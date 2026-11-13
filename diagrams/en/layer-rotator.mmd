@@ -1,0 +1,20 @@
+---
+displayMode: compact
+---
+gantt
+    dateFormat X
+    axisFormat %s
+    title Layer rotator ( A1: ② | A2: ③ | A3: ① )
+    section ㅤ
+    Press: milestone, done, 1, 1
+    Release: milestone, done, 2, 2
+    Press: milestone, done, 3, 3
+    Release: milestone, done, 4, 4
+    Press: milestone, done, 5, 5
+    Release: milestone, done, 6, 6
+    tickInterval 1day
+    section ㅤㅤ
+    A1: 0, 1s
+    A2: active, 1, 2s
+    A3: crit, 3, 2s
+    A1: 5, 2s

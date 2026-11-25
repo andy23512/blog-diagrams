@@ -20,7 +20,13 @@ Then add the PNG from `out/` to the HackMD note as an image (with alt text). `ge
 
 ## Pinned versions
 
-`mermaid` is pinned to **11.10.1** (and forced via `resolutions`) to match the version loaded by `hexo-theme-next` in `blog` (`_vendors.yml`). Newer Mermaid (12.x) positions Gantt tasks differently with `dateFormat X`: every start is drawn at 0. If the theme's Mermaid version changes, update the pin here and re-check the output.
+`mermaid` is pinned to **11.17.2** (and forced via `resolutions`) so renders are reproducible. Both blogs embed the PNGs from this repo, so the version no longer has to match the Mermaid loaded by any theme or HackMD.
+
+`@mermaid-js/mermaid-cli` 12.x declares `mermaid@^12`, but `resolutions` forces 11.17.2 (yarn prints an "incompatible" warning, which is expected). Mermaid 12 draws Gantt tasks differently, so keep the pin. `puppeteer` 25 is needed because older `@puppeteer/browsers` pulled in the vulnerable `extract-zip`.
+
+Gantt diagrams use `dateFormat x` (milliseconds) with values multiplied by 1000 (e.g. `13` becomes `13000`, while durations such as `1s` stay as they are). With `dateFormat X` (seconds), Mermaid 11.16+ draws every task start at 0, so don't switch back. `axisFormat %s` still shows seconds on the axis.
+
+When upgrading Mermaid, run `yarn build` (check the exit code, a parse error aborts the run) and compare the output with the previous PNGs.
 
 ## Notes
 

@@ -9,15 +9,15 @@
     "clean": "rm -rf out"
   },
   "devDependencies": {
-    "@mermaid-js/mermaid-cli": "11.12.0",
+    "@mermaid-js/mermaid-cli": "12.2.0",
     "@types/node": "26.6.6",
-    "mermaid": "11.10.1",
-    "puppeteer": "23.11.1",
+    "mermaid": "11.17.2",
+    "puppeteer": "25.18.1",
     "tsx": "4.23.15",
     "typescript": "7.0.2"
   },
   "resolutions": {
-    "mermaid": "11.10.1",
+    "mermaid": "11.17.2",
     "lodash-es": "^4.18.0",
     "katex": "0.18.10",
     "basic-ftp": "^6.2.4"
